@@ -45,6 +45,24 @@ int main(int argc, char *argv[]) {
 	printf("Bit-Depth: %d\n", depths[header.depth]);
 	printf("Colour-Type: %s\n", types[header.type]);
 
+	switch (header.depth) {
+		case BD_1:
+
+		break;
+		case BD_2:
+
+		break;
+		case BD_4:
+
+		break;
+		case BD_8:
+
+		break;
+		default:
+			printf("Error: Bit-Depth '%d' not supported. Aborting..\n", header.depth);
+		return 1;
+	}
+
 	fclose(file);
 	return 0;
 }
